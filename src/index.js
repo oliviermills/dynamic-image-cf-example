@@ -7,7 +7,7 @@ const supportedWidths = new Set(['1920', '1280', '1080', '720', '480', '320', '1
 
 exports.handler = async (event) => {
   console.log('request: ' + JSON.stringify(event))
-  if (event.headers['User-Agent'] !== 'Amazon CloudFront') {
+  if (event.headers['user-agent'] !== 'Amazon CloudFront') {
     return {
       statusCode: 403,
       body: 'Not authorized'
